@@ -3,7 +3,28 @@
 var count = 0;
 
 function cc(card) {
-  return "change Me";
+  switch (card) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "Q":
+    case "K":
+    case "J":
+    case "A":
+      count--;
+      break;
+  }
+  var holdbet = "Hold";
+  if (count > 0) {
+    holdbet = "Bet";
+  }
+  return count + " " + holdbet;
 }
 
 cc(2);
